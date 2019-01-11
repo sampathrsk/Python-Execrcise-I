@@ -1,0 +1,15 @@
+values = input("Enter the list with comma seprated numbers : ")
+a = values.split(",")
+print('Entered List:',a)
+def first(a):
+    original_list = []
+    for num in a:
+        if num not in original_list:
+            original_list.append(num)
+    return original_list
+
+print('Output through function is:',first(a))
+
+def second(a):
+    return list(set(a))
+print('Output of set is:',second(a))
