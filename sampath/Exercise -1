@@ -4,3 +4,22 @@ Write a program (function!) that takes a list and returns a new list that contai
 Extras:
 
 Write two different functions to do this - one using a loop and constructing a list, and another using sets.
+
+
+#Code of the program is below
+
+values = input("Enter the list with comma seprated numbers : ")
+a = values.split(",")
+print('Entered List:',a)
+def first(a):
+    original_list = []
+    for num in a:
+        if num not in original_list:
+            original_list.append(num)
+    return original_list
+
+print('Output through function is:',first(a))
+
+def second(a):
+    return list(set(a))
+print('Output of set is:',second(a))
